@@ -39,7 +39,7 @@ const GlobalStyles: GlobalStyleComponent<
 
       ${!removeBg &&
       css`
-        background-color: ${theme.colors.background};
+        background-color: ${theme.colors.white};
       `}
     }
 

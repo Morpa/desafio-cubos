@@ -27,7 +27,7 @@ export default {
     auxColor: '#ebebeb',
     textColor: '#5e5e5e',
     red: '#C53030',
-    background: '#FFF',
+    white: '#FFF',
     acqua: '#00ede7'
   },
 

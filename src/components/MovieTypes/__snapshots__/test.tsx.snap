@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MovieTypes /> should render correctly 1`] = `
+.c0 {
+  padding: 0.2rem 0.9rem;
+  text-align: center;
+  background: #FFF;
+  border: 2px solid #116193;
+  border-radius: 2rem;
+  color: #116193;
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+}
+
+.c0:hover {
+  background: #e5e5e5;
+}
+
+<span
+  class="c0"
+>
+  Suspense
+</span>
+`;
