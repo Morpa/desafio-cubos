@@ -25,11 +25,14 @@
     ]
   },
   "dependencies": {
+    "framer-motion": "^3.2.1",
     "next": "^10.0.5",
     "next-pwa": "^5.0.4",
+    "nprogress": "^0.2.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "styled-components": "5.2.1"
+    "styled-components": "5.2.1",
+    "styled-media-query": "^2.1.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
@@ -40,6 +43,7 @@
     "@testing-library/react": "^11.2.3",
     "@types/jest": "^26.0.20",
     "@types/node": "^14.14.22",
+    "@types/nprogress": "^0.2.0",
     "@types/react": "^17.0.0",
     "@types/styled-components": "^5.1.7",
     "@typescript-eslint/eslint-plugin": "^4.14.0",
