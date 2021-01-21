@@ -39,7 +39,7 @@ const GlobalStyles: GlobalStyleComponent<
 
       ${!removeBg &&
       css`
-        background-color: ${theme.colors.dark};
+        background-color: ${theme.colors.background};
       `}
     }
 
@@ -48,7 +48,7 @@ const GlobalStyles: GlobalStyleComponent<
     }
 
     #nprogress .bar {
-      background: ${theme.colors.yellow};
+      background: ${theme.colors.secondary};
 
       position: fixed;
       z-index: 1031;
@@ -65,7 +65,8 @@ const GlobalStyles: GlobalStyleComponent<
       right: 0px;
       width: 100px;
       height: 100%;
-      box-shadow: 0 0 10px ${theme.colors.green}, 0 0 5px ${theme.colors.yellow};
+      box-shadow: 0 0 10px ${theme.colors.secondary},
+        0 0 5px ${theme.colors.secondary};
       opacity: 1;
 
       -webkit-transform: rotate(3deg) translate(0px, -4px);
@@ -87,8 +88,8 @@ const GlobalStyles: GlobalStyleComponent<
       box-sizing: border-box;
 
       border: solid 2px transparent;
-      border-top-color: ${theme.colors.yellow};
-      border-left-color: ${theme.colors.yellow};
+      border-top-color: ${theme.colors.secondary};
+      border-left-color: ${theme.colors.secondary};
       border-radius: 50%;
 
       -webkit-animation: nprogress-spinner 400ms linear infinite;

@@ -22,14 +22,13 @@ export default {
   },
 
   colors: {
-    yellow: '#FFDE00',
-    red: '#FF4040',
-    green: '#2EC4B6',
-    dark: '#030517',
-    grey: '#1B2329',
-    midGrey: '#353F4C',
-    lightGrey: '#7A8C99',
-    white: '#FAFAFA'
+    primary: '#116193',
+    secondary: '#00ede7',
+    auxColor: '#ebebeb',
+    textColor: '#5e5e5e',
+    red: '#C53030',
+    background: '#FFF',
+    acqua: '#00ede7'
   },
 
   spacings: {
@@ -40,5 +39,10 @@ export default {
     large: '4.0rem',
     xlarge: '4.8rem',
     xxlarge: '5.6rem'
+  },
+
+  transition: {
+    default: '0.3s ease-in-out',
+    fast: '0.1s ease-in-out'
   }
 } as const

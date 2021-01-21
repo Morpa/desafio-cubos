@@ -27,14 +27,11 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
       <Head>
-        <title>PokeNext</title>
+        <title>Movies</title>
         <link rel="shortcut icon" href="/img/icon-512.png" />
         <link rel="apple-touch-icon" href="/img/icon-512.png" />
         <link rel="manifest" href="/manifest.json" />
-        <meta
-          name="description"
-          content="Your optimized Pokédex, in server side rendering."
-        />
+        <meta name="description" content="Search your prefered movies." />
       </Head>
       <AnimateSharedLayout>
         <GlobalStyles />

@@ -10466,6 +10466,13 @@ polished@^3.4.4:
   dependencies:
     "@babel/runtime" "^7.9.2"
 
+polished@^4.0.5:
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/polished/-/polished-4.0.5.tgz#3f91873c8f72dec1723b3f892f57fbb22645b23d"
+  integrity sha512-BY2+LVtOHQWBQpGN4GPAKpCdsBePOdSdHTpZegRDRCrvGPkRPTx1DEC+vGjIDPhXS7W2qiBxschnwRWTFdMZag==
+  dependencies:
+    "@babel/runtime" "^7.12.5"
+
 popmotion@^9.1.0:
   version "9.1.0"
   resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-9.1.0.tgz#4360d06bd18ce8baa8f9284ecec7d55344af6325"
