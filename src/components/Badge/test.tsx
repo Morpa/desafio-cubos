@@ -1,14 +1,14 @@
 import { screen } from '@testing-library/react'
 import { renderWithTheme } from 'utils/tests/helpers'
 
-import PercentBadge from '.'
+import Badge from '.'
 
-describe('<PercentBadge />', () => {
+describe('<Badge />', () => {
   it('should render the normal size by default', () => {
     renderWithTheme(
-      <PercentBadge>
+      <Badge>
         <div>Percent</div>
-      </PercentBadge>
+      </Badge>
     )
 
     expect(
@@ -21,9 +21,9 @@ describe('<PercentBadge />', () => {
 
   it('should render large size when is pased', () => {
     renderWithTheme(
-      <PercentBadge size="large">
+      <Badge size="large">
         <div>Percent</div>
-      </PercentBadge>
+      </Badge>
     )
 
     expect(
@@ -31,6 +31,21 @@ describe('<PercentBadge />', () => {
     ).toHaveStyle({
       height: '10rem',
       width: '10rem'
+    })
+  })
+
+  it('should render small size when is pased', () => {
+    renderWithTheme(
+      <Badge size="small">
+        <div>Percent</div>
+      </Badge>
+    )
+
+    expect(
+      screen.getByText(/percent/i).parentElement?.parentElement
+    ).toHaveStyle({
+      height: '4.0rem',
+      width: '4.0rem'
     })
   })
 })
