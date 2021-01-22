@@ -28,7 +28,8 @@ export default {
     textColor: '#5e5e5e',
     red: '#C53030',
     white: '#FFF',
-    acqua: '#00ede7'
+    acqua: '#00ede7',
+    cardBackground: '#e8e8e8'
   },
 
   spacings: {
