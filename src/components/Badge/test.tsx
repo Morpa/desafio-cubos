@@ -29,8 +29,8 @@ describe('<Badge />', () => {
     expect(
       screen.getByText(/percent/i).parentElement?.parentElement
     ).toHaveStyle({
-      height: '10rem',
-      width: '10rem'
+      height: '12rem',
+      width: '12rem'
     })
   })
 

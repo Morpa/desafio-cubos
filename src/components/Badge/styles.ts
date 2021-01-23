@@ -21,8 +21,8 @@ const wrapperModifiers = {
   `,
 
   large: (theme: DefaultTheme) => css`
-    height: 10rem;
-    width: 10rem;
+    height: 12rem;
+    width: 12rem;
     font-size: ${theme.font.sizes.xxlarge};
     border: 0.3rem solid ${theme.colors.primary};
 

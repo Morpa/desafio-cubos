@@ -4,7 +4,7 @@
   font-weight: 400;
   font-display: swap;
   src: local(''),
-       url('/fonts/abel-v12-latin-regular.woff2')
+       url('/fonts/abel-v12-latin-regular.woff2') format('woff2')
 }
 
 @font-face {

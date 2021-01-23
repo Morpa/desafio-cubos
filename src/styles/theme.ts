@@ -29,7 +29,8 @@ export default {
     red: '#C53030',
     white: '#FFF',
     acqua: '#00ede7',
-    cardBackground: '#e8e8e8'
+    cardBackground: '#e8e8e8',
+    movieBackground: '#f2f2f2'
   },
 
   spacings: {
