@@ -5,7 +5,7 @@ import Badge from 'components/Badge'
 import MovieTypes from 'components/MovieTypes'
 
 import floatToPercentage from 'utils/floatToPercentage'
-import formatToBR from 'utils/formatToBR'
+import formatDateBR from 'utils/formatDateBR'
 
 import * as S from './styles'
 
@@ -13,7 +13,7 @@ export type MovieCardProps = {
   poster_path: string
   overview: string
   release_date: string
-  genre_ids: number[]
+  genres: string[]
   title: string
   vote_average: number
   layoutId?: string
@@ -35,7 +35,7 @@ const MovieCard = ({
   poster_path,
   overview,
   release_date,
-  genre_ids,
+  genres,
   title,
   vote_average,
   layoutId
@@ -55,11 +55,11 @@ const MovieCard = ({
           </S.BadgeWrapper>
           <S.Header>{title}</S.Header>
           <S.InfosWrapper>
-            <S.Date>{formatToBR(release_date)}</S.Date>
+            <S.Date>{formatDateBR(release_date)}</S.Date>
             <S.Overview>{overview}</S.Overview>
             <S.Categories>
-              {genre_ids.map((genre) => (
-                <MovieTypes key={genre} name="Suspense" />
+              {genres.map((genre) => (
+                <MovieTypes key={genre} name={genre} />
               ))}
             </S.Categories>
           </S.InfosWrapper>

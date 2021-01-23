@@ -20,11 +20,6 @@ export const MovieWrapper = styled.a`
     background: ${theme.colors.cardBackground};
     text-decoration: none;
     color: ${theme.colors.textColor};
-    transition: ${theme.transition.default};
-
-    &:hover {
-      transform: scale(1.03);
-    }
 
     ${media.lessThan('medium')`
       flex-direction: column;
@@ -101,13 +96,15 @@ export const Overview = styled.div`
 export const Categories = styled.div`
   ${({ theme }) => css`
     display: flex;
-    padding: ${theme.spacings.xxsmall} 0;
     align-items: center;
     justify-content: flex-start;
+    margin-top: ${theme.spacings.small};
+    padding: ${theme.spacings.xxsmall} 0;
 
     ${media.lessThan('medium')`
       flex-wrap: wrap;
       justify-content: center;
+      margin-top: ${theme.spacings.xxsmall};
 
       ${MovieTypeStyles.Wrapper} {
         margin: 0.4rem;
