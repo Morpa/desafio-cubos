@@ -28,7 +28,6 @@ exports[`<MovieCard /> should render the correctly 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  font-family: 'Abel';
   border-radius: 50%;
   width: 100%;
   height: 100%;
