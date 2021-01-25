@@ -1,13 +1,14 @@
-import { screen } from '@testing-library/react'
+import { fireEvent, screen } from '@testing-library/react'
+
 import { renderWithTheme } from 'utils/tests/helpers'
 
 import Pagination from '.'
 
 const props = {
-  moviesPerPag: 5,
+  moviesPerPage: 5,
   totalMovies: 25,
-  paginate: 1,
-  currentPag: 1
+  paginate: jest.fn(),
+  currentPage: 1
 }
 
 describe('<Pagination />', () => {
@@ -27,5 +28,27 @@ describe('<Pagination />', () => {
     expect(container.querySelectorAll('li')).toHaveLength(5)
 
     expect(container.firstChild).toMatchSnapshot()
+  })
+
+  it('should navigate to next page', () => {
+    const paginate = jest.fn()
+
+    renderWithTheme(<Pagination {...props} paginate={paginate} />)
+
+    fireEvent.click(screen.getByRole('heading', { name: /2/i }))
+
+    expect(paginate).toBeCalled()
+  })
+
+  it('should navigate to previous page', () => {
+    const paginate = jest.fn()
+
+    renderWithTheme(
+      <Pagination {...props} currentPage={3} paginate={paginate} />
+    )
+
+    fireEvent.click(screen.getByRole('heading', { name: /2/i }))
+
+    expect(paginate).toBeCalled()
   })
 })

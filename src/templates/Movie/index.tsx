@@ -7,6 +7,7 @@ import Base from 'templates/Base'
 import floatToPercentage from 'utils/floatToPercentage'
 import formatDateBR from 'utils/formatDateBR'
 import minutesToHours from 'utils/minutesToHours'
+import formatValues from 'utils/formatValues'
 
 import * as S from './styles'
 
@@ -97,30 +98,15 @@ const Movie = ({
 
                     <S.Info>
                       <h3>Orçamento</h3>
-                      <p>
-                        {budget.toLocaleString('pt-BR', {
-                          style: 'currency',
-                          currency: 'USD'
-                        })}
-                      </p>
+                      <p>{formatValues(budget)}</p>
                     </S.Info>
                     <S.Info>
                       <h3>Receita</h3>
-                      <p>
-                        {revenue.toLocaleString('pt-BR', {
-                          style: 'currency',
-                          currency: 'USD'
-                        })}
-                      </p>
+                      <p>{formatValues(revenue)}</p>
                     </S.Info>
                     <S.Info>
                       <h3>Lucro</h3>
-                      <p>
-                        {(revenue - budget).toLocaleString('pt-BR', {
-                          style: 'currency',
-                          currency: 'USD'
-                        })}
-                      </p>
+                      <p>{formatValues(revenue - budget)}</p>
                     </S.Info>
                   </S.InfosWrapper>
                 </S.DetailsInfo>

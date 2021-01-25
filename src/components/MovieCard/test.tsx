@@ -4,6 +4,7 @@ import { renderWithTheme } from 'utils/tests/helpers'
 import MovieCard from '.'
 
 const props = {
+  id: '1',
   genres: ['Suspense', 'Terror', 'Fantasia'],
   original_title: 'Xuxa - Lua de Cristal',
   overview:

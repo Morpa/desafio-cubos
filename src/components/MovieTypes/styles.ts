@@ -3,6 +3,9 @@ import styled, { css } from 'styled-components'
 
 export const Wrapper = styled.span`
   ${({ theme }) => css`
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 0.2rem 0.9rem;
     text-align: center;
     background: ${theme.colors.white};

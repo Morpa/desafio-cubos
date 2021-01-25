@@ -62,7 +62,7 @@ export const Icon = styled.div<IconPositionProps>`
 export const Error = styled.span`
   ${({ theme }) => css`
     color: ${theme.colors.red};
-    font-size: ${theme.font.sizes.xsmall};
+    font-size: ${theme.font.sizes.medium};
   `}
 `
 

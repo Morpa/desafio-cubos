@@ -32,10 +32,10 @@ const Home = () => {
   const [movies, setMovies] = useState<Movie[]>([])
   const [genres, setGenres] = useState<Genre[]>([])
   const [currentPage, setCurrentPage] = useState(1)
-  const [moviesPerPag] = useState(5)
+  const [moviesPerPage] = useState(5)
 
-  const indexOfLastMovie = currentPage * moviesPerPag
-  const indexOfFirstMovie = indexOfLastMovie - moviesPerPag
+  const indexOfLastMovie = currentPage * moviesPerPage
+  const indexOfFirstMovie = indexOfLastMovie - moviesPerPage
   const currentMovies = movies.slice(indexOfFirstMovie, indexOfLastMovie)
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
@@ -80,15 +80,14 @@ const Home = () => {
             onInput={(value: string) => {
               setSearch(value)
             }}
+            error={inputError}
           />
         </form>
 
-        {inputError}
-
         {!!currentMovies &&
-          currentMovies.map((movie) => (
+          currentMovies.map((movie, index) => (
             <MovieCard
-              key={movie.title}
+              key={`${index}-${movie.title}`}
               layoutId={`${movie.title}-card`}
               genres={movie.genre_ids.map((genre_id) => formatGenre(genre_id))}
               {...movie}
@@ -97,9 +96,9 @@ const Home = () => {
 
         {!!movies && (
           <Pagination
-            moviesPerPag={moviesPerPag}
+            moviesPerPage={moviesPerPage}
             totalMovies={movies.length}
-            currentPag={currentPage}
+            currentPage={currentPage}
             paginate={paginate}
           />
         )}

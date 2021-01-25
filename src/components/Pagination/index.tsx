@@ -3,21 +3,21 @@ import Badge from 'components/Badge'
 import * as S from './styles'
 
 export type PaginationProps = {
-  moviesPerPag: number
+  moviesPerPage: number
   totalMovies: number
   paginate: (value: number) => void
-  currentPag: number
+  currentPage: number
 }
 
 const Pagination = ({
-  moviesPerPag,
+  moviesPerPage,
   totalMovies,
   paginate,
-  currentPag
+  currentPage
 }: PaginationProps) => {
   const pagNumbers = []
 
-  for (let i = 1; i <= Math.ceil(totalMovies / moviesPerPag); i++) {
+  for (let i = 1; i <= Math.ceil(totalMovies / moviesPerPage); i++) {
     pagNumbers.push(i)
   }
 
@@ -25,8 +25,8 @@ const Pagination = ({
     <S.Wrapper>
       <S.List>
         {pagNumbers.map((page) =>
-          page === currentPag ? (
-            <S.Page key={page} onClick={() => paginate(page)}>
+          page === currentPage ? (
+            <S.Page key={page}>
               <Badge size="small">{page}</Badge>
             </S.Page>
           ) : (
