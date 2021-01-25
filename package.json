@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "@styled-icons/material-outlined": "^10.26.0",
+    "axios": "^0.21.1",
     "framer-motion": "^3.2.1",
     "next": "^10.0.5",
     "next-pwa": "^5.0.4",

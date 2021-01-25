@@ -56,6 +56,9 @@ exports[`<MovieCard /> should render the correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   border-radius: 0.4rem;
 }
 
@@ -64,9 +67,24 @@ exports[`<MovieCard /> should render the correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  margin: 2rem 0;
   width: 100%;
   height: 32rem;
-  margin: 2rem 0;
+  margin-bottom: 4rem;
   background: #e8e8e8;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -110,6 +128,7 @@ exports[`<MovieCard /> should render the correctly 1`] = `
   color: #00ede7;
   overflow: auto;
   white-space: nowrap;
+  font-family: 'Abel';
 }
 
 .c9 {
@@ -171,24 +190,31 @@ exports[`<MovieCard /> should render the correctly 1`] = `
 
 @media (max-width:768px) {
   .c1 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
+    -webkit-flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
     width: 100%;
-    height: auto;
+    height: 100%;
   }
 }
 
 @media (max-width:768px) {
   .c2 {
-    width: auto;
+    width: 95%;
+    margin: 0 auto;
+    max-height: 100%;
   }
 }
 
 @media (max-width:768px) {
   .c8 {
-    height: auto;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     white-space: normal;
+    min-height: 90%;
+    font-size: 1.6rem;
   }
 }
 
@@ -211,7 +237,7 @@ exports[`<MovieCard /> should render the correctly 1`] = `
 
 @media (max-width:768px) {
   .c4 {
-    margin-top: 4.0rem;
+    margin-top: 2.4rem;
   }
 }
 
@@ -220,7 +246,7 @@ exports[`<MovieCard /> should render the correctly 1`] = `
 >
   <a
     class="c1"
-    href="/"
+    href="/movie/undefined"
   >
     <img
       alt="Poster of the movie Xuxa - Lua de Cristal"

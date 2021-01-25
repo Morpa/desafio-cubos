@@ -34,7 +34,7 @@ export const InputWrapper = styled.div`
 
 export const Input = styled.input<IconPositionProps>`
   ${({ theme, iconPosition }) => css`
-    color: ${theme.colors.white};
+    color: ${theme.colors.textColor};
     font-family: ${theme.font.family};
     font-size: ${theme.font.sizes.medium};
     padding: 1.2rem 0;

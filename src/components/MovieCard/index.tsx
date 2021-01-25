@@ -10,10 +10,12 @@ import formatDateBR from 'utils/formatDateBR'
 import * as S from './styles'
 
 export type MovieCardProps = {
+  id: string
   poster_path: string
   overview: string
   release_date: string
-  genres: string[]
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  genres: any
   title: string
   vote_average: number
   layoutId?: string
@@ -32,21 +34,20 @@ const animationSpring: MotionProps = {
 }
 
 const MovieCard = ({
+  id,
   poster_path,
   overview,
   release_date,
   genres,
   title,
-  vote_average,
-  layoutId
+  vote_average
 }: MovieCardProps) => (
   <S.Wrapper {...animationSpring}>
-    <Link href="/" passHref>
-      <S.MovieWrapper>
+    <Link href={`/movie/${id}`} passHref>
+      <S.MovieWrapper layoutId={`${title}-card`}>
         <S.Cover
           src={`https://image.tmdb.org/t/p/w342/${poster_path}`}
           alt={`Poster of the movie ${title}`}
-          layoutId={layoutId}
         />
 
         <S.Content>
@@ -55,12 +56,13 @@ const MovieCard = ({
           </S.BadgeWrapper>
           <S.Header>{title}</S.Header>
           <S.InfosWrapper>
-            <S.Date>{formatDateBR(release_date)}</S.Date>
+            <S.Date>{release_date && formatDateBR(release_date)}</S.Date>
             <S.Overview>{overview}</S.Overview>
             <S.Categories>
-              {genres.map((genre) => (
-                <MovieTypes key={genre} name={genre} />
-              ))}
+              {!!genres &&
+                genres.map((genre: string) => (
+                  <MovieTypes key={genre} name={genre} />
+                ))}
             </S.Categories>
           </S.InfosWrapper>
         </S.Content>

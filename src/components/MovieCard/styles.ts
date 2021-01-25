@@ -8,28 +8,34 @@ export const Wrapper = styled(motion.div)`
   ${({ theme }) => css`
     display: flex;
     flex-direction: column;
+    flex: 1;
     border-radius: ${theme.border.radius};
   `}
 `
-export const MovieWrapper = styled.a`
+export const MovieWrapper = styled(motion.a)`
   ${({ theme }) => css`
     display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: center;
+    margin: 2rem 0;
     width: 100%;
     height: 32rem;
-    margin: 2rem 0;
+    margin-bottom: 4rem;
     background: ${theme.colors.cardBackground};
     text-decoration: none;
     color: ${theme.colors.textColor};
 
     ${media.lessThan('medium')`
-      flex-direction: column;
+      flex-direction: column-reverse;
       width: 100%;
-      height: auto;
+      height: 100%;
     `}
   `}
 `
 
-export const Cover = styled(motion.img)`
+export const Cover = styled.img`
   ${({ theme }) => css`
     width: 20rem;
     height: 100%;
@@ -37,7 +43,9 @@ export const Cover = styled(motion.img)`
     object-fit: cover;
 
     ${media.lessThan('medium')`
-      width: auto;
+        width: 95%;
+        margin: 0 auto;
+        max-height: 100%;
     `}
   `}
 `
@@ -61,11 +69,14 @@ export const Header = styled.h1`
     color: ${theme.colors.acqua};
     overflow: auto;
     white-space: nowrap;
-  `}
+    font-family: 'Abel';
 
-  ${media.lessThan('medium')`
-    height: auto;
-    white-space: normal;
+    ${media.lessThan('medium')`
+    align-items: center;
+        white-space: normal;
+        min-height:90%;
+        font-size:${theme.font.sizes.medium}
+      `};
   `}
 `
 
@@ -126,7 +137,7 @@ export const BadgeWrapper = styled.div`
     margin-left: ${theme.spacings.xsmall};
 
     ${media.lessThan('medium')`
-      margin-top: ${theme.spacings.large};
+      margin-top: ${theme.spacings.small};
     `}
   `}
 `
