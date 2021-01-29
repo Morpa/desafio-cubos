@@ -59,7 +59,7 @@ Este projeto foi desenvolvido para o desafio Front-End da Cubos, a idéia é rep
 ## :checkered_flag: Iniciando ##
 **Será necessária a instalação do [Node.js](https://nodejs.org/en/download/) ou [Yarn](https://yarnpkg.com/) e do [Git](https://git-scm.com/) na sua máquina (caso ainda não tenha instalado).
 
-Dentra da raíz do projeto, crie um arquivo .env.local (conforme o aqruivo .env.example) e insira sua chave da API. Disponível em [TMDB](https://www.themoviedb.org/?language=pt-PT)
+Dentro da raíz do projeto, crie um arquivo .env.local (conforme o aqruivo .env.example) e insira sua chave da API. Disponível em [TMDB](https://www.themoviedb.org/?language=pt-PT)
 
 
 ```bash
